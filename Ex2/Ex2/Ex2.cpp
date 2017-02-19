@@ -13,11 +13,11 @@
 #include <ctime>
 using namespace std;
 
-// EXERCÍCIO 2.1
+// EXERCï¿½CIO 2.1
 
 // ??
 
-// EXERCÍCIO 2.2
+// EXERCï¿½CIO 2.2
 
 /*
 
@@ -125,7 +125,7 @@ return 0;
 
 */
 
-// EXERCÍCIO 2.3
+// EXERCï¿½CIO 2.3
 
 /*
 
@@ -155,7 +155,7 @@ return 0;
 
 */
 
-// EXERCÍCIO 2.4
+// EXERCï¿½CIO 2.4
 
 /*
 
@@ -170,13 +170,13 @@ price = 5 + 1.5*ceil((w-500)/100);
 } else {
 price = 12.5 + 5*ceil((w-1000)/250);
 }
-cout << "The price is " << price << "€." << endl;
+cout << "The price is " << price << "ï¿½." << endl;
 return 0;
 }
 
 */
 
-// EXERCÍCIO 2.5
+// EXERCï¿½CIO 2.5
 
 /*
 
@@ -189,15 +189,15 @@ cout << fixed << setprecision(3);
 if (delta > 0){
 r1 = (-b + sqrt(delta))/2*a;
 r2 = (-b - sqrt(delta))/2*a;
-cout << "A equação tem 2 raízes reais distintas: " << r1 << " e " << r2;
+cout << "A equaï¿½ï¿½o tem 2 raï¿½zes reais distintas: " << r1 << " e " << r2;
 } else if (delta == 0){
 r1 = -b/(2*a);
 r2 = r1;
-cout << "A equação tem 2 raízes reais iguais: " << r1 << " e " << r2;
+cout << "A equaï¿½ï¿½o tem 2 raï¿½zes reais iguais: " << r1 << " e " << r2;
 } else {
 real = -b/(2*a);
 complex = sqrt(-delta)/(2*a);
-cout << "A equaç\ao tem 2 raízes complexas conjugadas: " << real << "+"<< complex << "i e " << real << "-" << complex << "i";
+cout << "A equaï¿½\ao tem 2 raï¿½zes complexas conjugadas: " << real << "+"<< complex << "i e " << real << "-" << complex << "i";
 }
 
 return 0;
@@ -205,7 +205,7 @@ return 0;
 
 */
 
-// EXERCÍCIO 2.6
+// EXERCï¿½CIO 2.6
 
 // ALINEA a)
 
@@ -218,23 +218,23 @@ int main() {
 	cin >> n;
 	a = floor(sqrt(n));
 	for (int i = 2; i <= a; i++) {
-		if ((n % a) == 0) {
+		if ((n % i) == 0) {
 			prime = false;
 			break;
 		}
 	}
 	if (prime) {
-		cout << n << " é primo." << endl;
+		cout << n << " ï¿½ primo." << endl;
 	}
 	else {
-		cout << n << " não é primo." << endl;
+		cout << n << " nï¿½o ï¿½ primo." << endl;
 	}
 	return 0;
 }
 
 */
 
-//ALÍNEA b)
+//ALï¿½NEA b)
 
 /*
 
@@ -261,7 +261,7 @@ return 0;
 
 */
 
-//ALÍNEA c)
+//ALï¿½NEA c)
 
 /*
 
@@ -286,7 +286,7 @@ return 0;
 
 */
 
-// EXERCÍCIO 2.7
+// EXERCï¿½CIO 2.7
 
 /*
 
@@ -306,7 +306,7 @@ return 0;
 
 */
 
-// EXERCÍCIO 2.8
+// EXERCï¿½CIO 2.8
 
 /*
 
@@ -319,15 +319,15 @@ cin >> q >> j >> n;
 for (int i = 1; i <= n; i++){
 q *= 1 + (j/100.0);
 }
-cout << "Final balance = " << q <<"€" << endl;
+cout << "Final balance = " << q <<"ï¿½" << endl;
 return 0;
 }
 
 */
 
-// EXERCÍCIO 2.9
+// EXERCï¿½CIO 2.9
 
-//ALÍNEA a)
+//ALï¿½NEA a)
 
 /*
 
@@ -357,7 +357,7 @@ return 0;
 
 */
 
-//ALÍNEA b)
+//ALï¿½NEA b)
 
 /*
 
@@ -396,14 +396,14 @@ return 0;
 
 */
 
-// ALÍNEA c)
+// ALï¿½NEA c)
 
 // ???
 
 
-// EXERCÍCIO 2.10
+// EXERCï¿½CIO 2.10
 
-	// ALÍNEA a)
+	// ALï¿½NEA a)
 
 /*
 
@@ -412,17 +412,17 @@ int main() {
 	cout << "Insert an integer: ";
 	cin >> a;
 	if ((a / 100) == (a % 10)) {
-		cout << a << " é capicua" << endl;
+		cout << a << " ï¿½ capicua" << endl;
 	}
 	else {
-		cout << a << " não é capicua" << endl;
+		cout << a << " nï¿½o ï¿½ capicua" << endl;
 	}
 		return 0;
 }
 
 */
 
-	// ALÍNEA b)
+	// ALï¿½NEA b)
 
 /*
 
@@ -460,9 +460,9 @@ int main() {
 
 */
 
-// EXERCÍCIO 2.11
+// EXERCï¿½CIO 2.11
 
-	// ALÍNEA a)
+	// ALï¿½NEA a)
 
 /*
 
@@ -480,7 +480,7 @@ int main() {
 
 */
 
-	// ALÍNEA b)
+	// ALï¿½NEA b)
 
 /*
 
@@ -500,7 +500,7 @@ int main() {
 
 */
 
-	// ALÍNEA c)
+	// ALï¿½NEA c)
 
 /*
 
@@ -523,7 +523,7 @@ int main() {
 
 */
 
-// EXERCÍCIO 2.13
+// EXERCï¿½CIO 2.13
 
 /*
 
@@ -554,9 +554,9 @@ int main() {
 
 */
 
-// EXERCÍCIO 2.14
+// EXERCï¿½CIO 2.14
 
-	// ALÍNEA a)
+	// ALï¿½NEA a)
 
 /*
 
@@ -581,7 +581,7 @@ int main() {
 
 */
 
-	// ALÍNEA b)
+	// ALï¿½NEA b)
 
 /*
 
@@ -617,7 +617,7 @@ int main() {
 
 */
 
-// EXERCÍCIO 2.15
+// EXERCï¿½CIO 2.15
 
 int main() {
 	srand(time(NULL));
