@@ -9,6 +9,8 @@
 #include <iostream>
 #include <math.h>
 #include <iomanip>
+#include <string>
+#include <ctime>
 using namespace std;
 
 // EXERCÍCIO 2.1
@@ -207,7 +209,7 @@ return 0;
 
 // ALINEA a)
 
-
+/*
 
 int main() {
 	int n, a;
@@ -230,6 +232,7 @@ int main() {
 	return 0;
 }
 
+*/
 
 //ALÍNEA b)
 
@@ -400,11 +403,246 @@ return 0;
 
 // EXERCÍCIO 2.10
 
-// ALÍNEA a)
+	// ALÍNEA a)
+
+/*
 
 int main() {
 	int a;
-	if ((a / 100) == (a % 100))
+	cout << "Insert an integer: ";
+	cin >> a;
+	if ((a / 100) == (a % 10)) {
+		cout << a << " é capicua" << endl;
+	}
+	else {
+		cout << a << " não é capicua" << endl;
+	}
 		return 0;
 }
 
+*/
+
+	// ALÍNEA b)
+
+/*
+
+int main() {
+	int a, b;
+	bool capicua = true;
+	cout << "Insert an integer: ";
+	cin >> a;
+	while (a > 10) {
+		int length = 0;
+		b = a;
+		while (b /= 10) {
+			length++;
+		}
+		int i = pow(10, length);
+
+		if ((a / i) != (a % 10)) {
+			capicua = false;
+			break;
+		}
+		else {
+			a %= i;
+			a /= 10;
+		}
+	} ;
+
+	if (capicua) {
+		cout << "E capicua." << endl;
+	}
+	else {
+		cout << "Nao e capicua." << endl;
+	}
+	return 0;
+}
+
+*/
+
+// EXERCÍCIO 2.11
+
+	// ALÍNEA a)
+
+/*
+
+int main() {
+	int n;
+	float sum = 0;
+	cout << "Insert an integer: ";
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		sum += pow(-1, i - 1) * (4.0 / (2 * i - 1));
+	}
+	cout << "SUM = " << sum << endl;
+	return 0;
+}
+
+*/
+
+	// ALÍNEA b)
+
+/*
+
+int main() {
+	int n;
+	float sum = 1;
+	float last = 1;
+	cout << "Insert an integer: ";
+	cin >> n;
+	for (int i = 1; i < n; i++) {
+		last *= (1.0 / i);
+		sum += last;
+	}
+	cout << "SUM = " << sum << endl;
+	return 0;
+}
+
+*/
+
+	// ALÍNEA c)
+
+/*
+
+int main() {
+	int n;
+	float x;
+	float sum = 1;
+	float last = 1;
+	cout << "Insert an integer: ";
+	cin >> x;
+	cout << "Insert the number of elemnts: ";
+	cin >> n;
+	for (int i = 1; i < n; i++) {
+		last *= (float)(x / i);
+		sum += pow(-1, i - 1) * last;
+	}
+	cout << "SUM = " << sum << endl;
+	return 0;
+}
+
+*/
+
+// EXERCÍCIO 2.13
+
+/*
+
+int main() {
+	int n;
+	cout << "Insert an integer: ";
+	cin >> n;
+	string ans = to_string(n) + " = ";
+	bool finished = false;
+	while (!finished) {
+		for (int i = 2; i <= n; i++) {
+			if (n % i == 0) {
+				ans += to_string(i);
+				if (n != i) {
+					ans += "x";
+				}
+				else {
+					finished = true;
+				}
+				n /= i;
+				break;
+			}
+		}
+	} 
+	cout << ans << endl; 
+	return 0;
+}
+
+*/
+
+// EXERCÍCIO 2.14
+
+	// ALÍNEA a)
+
+/*
+
+int main() {
+	int n, nMaxIter, i;
+	double rq, rqn, rqn2, dif, delta;
+	cout << "Insert 2 ints and a double: (n nNaxIter delta): ";
+	cin >> n >> nMaxIter >> delta;
+	rq = 1;
+	i = 1;
+	cout << fixed << setprecision(6);
+	do {
+		rqn = (rq + (n / rq)) / 2.0;
+		rqn2 = pow(rqn, 2.0);
+		dif = n - rqn2;
+		cout << rq << " " << rqn << " " << rqn2 << " " << dif << endl;
+		rq = rqn;
+		i++;
+	} while (abs(dif) > delta && i <= nMaxIter);
+	return 0;
+}
+
+*/
+
+	// ALÍNEA b)
+
+/*
+
+int main() {
+	int n, nMaxIter, i, cnt;
+	double rq, rqn, rqn2, dif, delta, delta_copy;
+	cout << "Insert 2 ints and a double: (n nNaxIter delta): ";
+	cin >> n >> nMaxIter >> delta;
+	cnt = 0;
+	delta_copy = delta - trunc(delta);
+	rq = 1;
+	i = 1;
+	while (delta_copy != 0) {
+		delta_copy *= 10;
+		cnt++;
+		delta_copy -= trunc(delta_copy);
+	}
+
+	cout << fixed << setprecision(cnt);
+	do {
+		rqn = (rq + (n / rq)) / 2.0;
+		rqn2 = pow(rqn, 2.0);
+		dif = n - rqn2;
+		cout << rq << " " << rqn << " " << rqn2 << " " << dif << endl;
+		rq = rqn;
+		i++;
+	} while (abs(dif) > delta && i <= nMaxIter);
+	cout << "Value of sqrt(" << n << ") = " << sqrt(n) << endl;
+	cout << "Estimated value(rq) = " << rq << endl;
+	cout << "Delta (|sqrt - rq|) = " << abs(sqrt(n) - rq) << endl;
+	return 0;
+}
+
+*/
+
+// EXERCÍCIO 2.15
+
+int main() {
+	srand(time(NULL));
+	int n1, n2, ans, correct_ans;
+	n1 = (rand() % 7) + 2;
+	n2 = (rand() % 7) + 2;
+	correct_ans = n1*n2;
+	cout << "Result of " << n1 << "x" << n2 << "= ";
+	time_t begin = time(nullptr);
+	cin >> ans;
+	time_t end = time(nullptr);
+	double time = double(end - begin);
+	if (ans != correct_ans) {
+		cout << "Muito mau!" << endl;
+	}
+	else if (ans == correct_ans) {
+		if (time < 5) {
+			cout << "Bom!" << endl;
+		}
+		else if (time <= 10) {
+			cout << "Satisfaz." << endl;
+		}
+		else {
+			cout << "Insuficiente." << endl;
+		}
+	}
+	return 0;
+}
