@@ -1,3 +1,5 @@
 ﻿  main.cpp
+\\mac\home\desktop\faculdade\1ºano - 2ºsemestre\prog\projetos\ex3\ex3\main.cpp(529): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+\\mac\home\desktop\faculdade\1ºano - 2ºsemestre\prog\projetos\ex3\ex3\main.cpp(534): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Ex3.vcxproj -> \\Mac\Home\Desktop\FACULDADE\1ºANO - 2ºSEMESTRE\PROG\Projetos\Ex3\Debug\Ex3.exe
   Ex3.vcxproj -> \\Mac\Home\Desktop\FACULDADE\1ºANO - 2ºSEMESTRE\PROG\Projetos\Ex3\Debug\Ex3.pdb (Full PDB)

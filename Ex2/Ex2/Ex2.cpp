@@ -189,17 +189,16 @@ cout << fixed << setprecision(3);
 if (delta > 0){
 r1 = (-b + sqrt(delta))/2*a;
 r2 = (-b - sqrt(delta))/2*a;
-cout << "A equa��o tem 2 ra�zes reais distintas: " << r1 << " e " << r2;
+cout << "A equaçao tem 2 raizes reais distintas: " << r1 << " e " << r2;
 } else if (delta == 0){
 r1 = -b/(2*a);
 r2 = r1;
-cout << "A equa��o tem 2 ra�zes reais iguais: " << r1 << " e " << r2;
+cout << "A equaçao tem 2 raizes reais iguais: " << r1 << " e " << r2;
 } else {
 real = -b/(2*a);
 complex = sqrt(-delta)/(2*a);
-cout << "A equa�\ao tem 2 ra�zes complexas conjugadas: " << real << "+"<< complex << "i e " << real << "-" << complex << "i";
+cout << "A equaçaao tem 2 raizes complexas conjugadas: " << real << "+"<< complex << "i e " << real << "-" << complex << "i";
 }
-
 return 0;
 }
 
@@ -293,9 +292,9 @@ return 0;
 int main(){
 float inf, sup, inc;
 double pi = 3.14159265;
-const std::streamsize oldp = cin.precision();
 cout << "Insert limits and increment (inf sup increment): ";
 cin >> inf >> sup >> inc;
+cout << "ang     sin     cos     tan" << endl;
 for (inf; inf <= sup; inf += inc){
 double n = inf*pi/180.0;
 cout << inf << ": ";
@@ -619,6 +618,8 @@ int main() {
 
 // EXERC�CIO 2.15
 
+/*
+
 int main() {
 	srand(time(NULL));
 	int n1, n2, ans, correct_ans;
@@ -646,3 +647,5 @@ int main() {
 	}
 	return 0;
 }
+
+*/
