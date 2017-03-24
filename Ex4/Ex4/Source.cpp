@@ -409,7 +409,7 @@ int main() {
 
 */
 
-/* EXERCICIO 8 */
+/*
 
 void bubblesort(vector<string> &v) {
 	int len = v.size();
@@ -431,7 +431,6 @@ void bubblesort(vector<string> &v) {
 	}
 }
 
-/*
 int main() {
 	vector<string> vec;
 	string str;
@@ -463,6 +462,7 @@ int main() {
 
 */
 
+/* EXERCICIO 9
 int binarySearch(const vector<string> &v, string value) {
 	int top = v.size() - 1;
 	int bottom = 0;
@@ -525,6 +525,7 @@ int main() {
 	return 0;
 }
 
+*/
 
 /* EXERCICIO 13
 
