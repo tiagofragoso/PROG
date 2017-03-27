@@ -410,8 +410,7 @@ int main() {
 */
 
 /*
-
-void bubblesort(vector<string> &v) {
+void bubblesortString(vector<string> &v) {
 	int len = v.size();
 
 	while (len > 1) {
@@ -445,7 +444,7 @@ int main() {
 
 	if (!vec.empty()) {
 
-		bubblesort(vec);
+		bubblesortString(vec);
 
 		cout << "Vetor ordenado com sucesso!" << endl;
 
@@ -522,6 +521,201 @@ int main() {
 		cout << "Vetor vazio." << endl;
 	}
 
+	return 0;
+}
+
+*/
+
+// EXERCICIO 10
+void removeDuplicates(vector<int> &v) {
+	int len = v.size() - 1;
+	for (int n = 0; n < len; n++){
+
+		for (int i = n + 1; i < len; i++) {
+
+			if (v.at(n) == v.at(i)) {
+
+				for (int x = i; x < len - 1; x++) {
+					v.at(x) = v.at(x + 1);
+				}
+
+				len--;
+				v.resize(len);
+			}
+		}
+	}
+}
+/*
+int main() {
+	vector<int> vec = { 2, 1, 2, 3, 3, 4, 3, 5, 4, 1, 2 };
+	removeDuplicates(vec);
+	for (int i = 0; i < vec.size(); i++) {
+		cout << vec.at(i) << endl;
+	}
+	return 0;
+}
+
+*/
+
+/* EXERCICIO 12
+
+void bubblesortInt(vector<int> &v) {
+	int len = v.size();
+
+	while (len > 1) {
+
+		len--;
+
+		for (int i = 0; i < len; i++) {
+
+			if (v.at(i) > v.at(i + 1)) {
+				int temp = v.at(i + 1);
+
+				v.at(i + 1) = v.at(i);
+
+				v.at(i) = temp;
+			}
+		}
+	}
+}
+
+int binarySearchInt(const vector<int> &v, int value) {
+	int top = v.size() - 1;
+	int bottom = 0;
+	int middle;
+	int pos = -1;
+	bool found = false;
+
+	while ((bottom <= top) && !found) {
+		middle = (bottom + top) / 2;
+		if (value == v.at(middle)) {
+			pos = middle;
+			found = true;
+		}
+		else if (value < v.at(middle)) {
+			top = middle - 1;
+		}
+		else {
+			bottom = middle + 1;
+		}
+	}
+
+	return pos;
+
+}
+
+vector<int> reunion(const vector<int> &v1, const vector<int> &v2) {
+	vector<int> result;
+	for (int i = 0; i < v1.size(); i++) {
+		result.push_back(v1.at(i));
+	}
+
+	for (int i = 0; i < v2.size(); i++) {
+		result.push_back(v2.at(i));
+	}
+	removeDuplicates(result);
+	bubblesortInt(result);
+	return result;
+}
+
+vector<int> intersection(const vector<int> &v1, const vector<int> &v2) {
+	vector<int> result;
+	for (int i = 0; i < v1.size(); i++) {
+		if (binarySearchInt(v2, v1.at(i)) != 1) result.push_back(v1.at(i));
+	}
+	return result;
+}
+
+
+int main() {
+	vector<int> v1, v2;
+	int next;
+	cout << "Insira valor para o vetor 1 (Ctrl-Z para terminar): ";
+
+	while (true) {
+		cin >> next;
+		if (!cin.eof()) {
+			v1.push_back(next);
+			cout << "Insira valor para o vetor 1 (Ctrl-Z para terminar): ";
+		}
+		else {
+			break;
+		}
+	}
+	cin.clear();
+
+	cout << "Insira valor para o vetor 2 (Ctrl-Z para terminar): ";
+
+	while (true) {
+		cin >> next;
+		if (!cin.eof()) {
+			v2.push_back(next);
+			cout << "Insira valor para o vetor 2 (Ctrl-Z para terminar): ";
+		}
+		else {
+			break;
+		}
+	}
+	cin.clear();
+
+	removeDuplicates(v1);
+	removeDuplicates(v2);
+	bubblesortInt(v1);
+	bubblesortInt(v2);
+
+	return 0;
+}
+
+*/
+
+/* EXERCICIO 12
+
+double executeOpeartion(string op) {
+	op.erase(remove(op.begin(), op.end(), ' '), op.end());
+	char operation;
+	string snum1, snum2;
+	double num1, num2, result;
+	result = 0;
+
+	for (int i = 0; i < op.size(); i++) {
+		if (op.at(i) == '+' || op.at(i) == '-' || op.at(i) == '*' || op.at(i) == '/') {
+			operation = op.at(i);
+			snum1 = op.substr(0, i);
+			snum2 = op.substr(i + 1, op.size());
+			break;
+		}
+	}
+
+	num1 = stod(snum1);
+	num2 = stod(snum2);
+
+	switch (operation) {
+	case '+':
+		result = num1 + num2;
+		break;
+
+	case '-':
+		result = num1 - num2;
+		break;
+
+	case '*':
+		result = num1 * num2;
+		break;
+
+	case '/':
+		result = num1 / num2;
+		break;
+
+	}
+
+	return result;
+}
+
+int main() {
+	string input;
+	cout << "Insira a operacao : ";
+	getline(cin, input);
+	cout << executeOpeartion(input) << endl;
 	return 0;
 }
 
